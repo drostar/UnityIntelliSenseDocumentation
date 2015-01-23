@@ -1,2 +1,2 @@
 # UnityIntelliSenseDocumentation
-XML Documentation that enables Intellisense code hints for the Unity game engine libraries.
+XML Documentation that enables IntelliSense code hints for the Unity game engine libraries.
