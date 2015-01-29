@@ -35,8 +35,13 @@ public static class ImportXmlDocsForUnityVS
         }
         Debug.Log("Destination folder will be: " + baseDestPath);
 
-        copyFile(baseSourcePath, @"Managed/UnityEngine.xml", baseDestPath);
-        copyFile(baseSourcePath, @"Managed/UnityEditor.xml", baseDestPath);
+#if UNITY_EDITOR_OSX
+		string managedPath = Path.Combine(baseSourcePath, "Frameworks/Managed");
+#else
+		string managedPath = Path.Combine(baseSourcePath, "Managed");
+#endif
+		copyFile(managedPath, @"UnityEngine.xml", baseDestPath);
+		copyFile(managedPath, @"UnityEditor.xml", baseDestPath);
 
         string guiBaseFolder = Path.Combine(baseSourcePath, @"UnityExtensions/Unity/GUISystem");
         string versionedGuiBaseFolder = Path.Combine(guiBaseFolder, unityVersion);
