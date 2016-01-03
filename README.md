@@ -1,6 +1,8 @@
 # Unity IntelliSense Documentation
 XML Documentation that enables IntelliSense code hints for the Unity game engine libraries.
 
+<b>NOTE: Unity 5.2 (and onward) now has decent XML files built-in so these files are obsolete. If you're using an older version of Unity then read on.</b>
+
 <h3>Instructions</h3>
 <P>Copy the XML files into your Unity program folder in the following locations:</P>
 <P>
